@@ -84,3 +84,51 @@ public class Exception {
 	}
 }
 ```
+
+因此强制考虑处理异常：<br>
+1）利用try-catch<br>
+```
+package practice;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class Exception {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File f= new File("d:/LOL.exe");
+        
+        //试图打开文件LOL.exe，会抛出FileNotFoundException，如果不处理该异常，就会有编译错误
+        
+        try{
+            System.out.println("试图打开 d:/LOL.exe");
+            new FileInputStream(f);
+            System.out.println("成功打开");
+        }
+        catch(FileNotFoundException e){
+            System.out.println("d:/LOL.exe不存在");
+            e.printStackTrace();
+        }
+	}
+}
+编译结果：
+试图打开 d:/LOL.exe
+d:/LOL.exe不存在
+java.io.FileNotFoundException: d:\LOL.exe (系统找不到指定的文件。)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:155)
+	at practice.Exception.main(Exception.java:17)
+```
+
+2)
+
+
+
+
+
+
+
+
