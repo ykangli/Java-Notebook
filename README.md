@@ -113,6 +113,7 @@ public class Exception {
         }
 	}
 }
+
 编译结果：
 试图打开 d:/LOL.exe
 d:/LOL.exe不存在
@@ -121,8 +122,39 @@ java.io.FileNotFoundException: d:\LOL.exe (系统找不到指定的文件。)
 	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:155)
 	at practice.Exception.main(Exception.java:17)
-```<br>
-2)
+```
+<br>
+2)使用异常的父类进行catch<br>
+FileNotFoundException是`Exception`的子类，使用Exception也可以catch住FileNotFoundException
+
+```
+package exception;
+  
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+  
+public class TestException {
+  
+    public static void main(String[] args) {
+          
+        File f= new File("d:/LOL.exe");
+          
+        try{
+            System.out.println("试图打开 d:/LOL.exe");
+            new FileInputStream(f);
+            System.out.println("成功打开");
+        }
+         
+        catch(Exception e){
+            System.out.println("d:/LOL.exe不存在");
+            e.printStackTrace();
+        }
+          
+    }
+}
+```
+
 
 
 
