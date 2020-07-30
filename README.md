@@ -1,17 +1,19 @@
 # -
 记录java自学过程，此外将有用及重要的知识点整理记录
 
-`@Override`
+`@Override`<br>
 1）Override即为方法重写，又叫覆写，子类与父类的方法返回类型一样、方法名称一样，参数一样，这样我们说子类与父类的方法构成了重写关系。
 2）方法重写（Override）与方法重载（Overload）之间的关系：重载发生在同一个类内部的两个方法或多个方法。重写发生在父类和子类之间。
 
 具体代码实例：<br>
-public class InheritenceTest {<br>
-    public static void main(String[] args) {<br>
-        Dog dog = new Dog();<br>
-        dog.run();<br>
-    }<br>
-}<br>
+```
+public class InheritenceTest {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.run();
+    }
+}
+```
  
 class Animal {<br>
     public void run() {<br>
