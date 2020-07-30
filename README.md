@@ -31,7 +31,7 @@ class Dog extends Animal {
 Dog is running
 animal is running
 ```
-3) 在定义一个类的时候，如果没有显式指定该类的父类，那么该类就会继承于java.lang.Object(JDK提供的一个类，Object类是Java中所有类直接或间接父类)。下面举个例子：
+在定义一个类的时候，如果没有显式指定该类的父类，那么该类就会继承于java.lang.Object(JDK提供的一个类，Object类是Java中所有类直接或间接父类)。下面举个例子：
 
 ``` 
 public class InheritenceTest {
@@ -122,7 +122,7 @@ java.io.FileNotFoundException: d:\LOL.exe (系统找不到指定的文件。)
 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:155)
 	at practice.Exception.main(Exception.java:17)
 ```
-
+<br>
 2)
 
 
