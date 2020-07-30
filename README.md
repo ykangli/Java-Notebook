@@ -62,3 +62,24 @@ grandpa
 father
 son
 ```
+
+`异常`
+下面的例子为利用java打开`d:/LOL.exe`,如果不做任何处理就会报错，Java会强制你考虑两种情况:该文件存在与否<br>
+
+```
+package practice;
+
+import java.io.File;
+import java.io.FileInputStream;
+
+public class Exception {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File f= new File("d:/LOL.exe");
+        
+        //试图打开文件LOL.exe，会抛出FileNotFoundException，如果不处理该异常，就会有编译错误
+        new FileInputStream(f);
+	}
+}
+```
