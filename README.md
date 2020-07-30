@@ -13,34 +13,35 @@ public class InheritenceTest {
         dog.run();
     }
 }
+ 
+class Animal {
+    public void run() {
+        System.out.println("animal is running");
+    }
+}
+ 
+class Dog extends Animal {
+    public void run() {
+        System.out.println("Dog is running");
+        super.run();//调用父类的run方法
+    }
+}
+输出结果：
+Dog is running
+animal is running
 ```
+3) 在定义一个类的时候，如果没有显式指定该类的父类，那么该类就会继承于java.lang.Object(JDK提供的一个类，Object类是Java中所有类直接或间接父类)。下面举个例子：
+
+``` 
+public class InheritenceTest {
+    public static void main(String[] args) {
+        Son son = new Son();
+    }
+}
  
-class Animal {<br>
-    public void run() {<br>
-        System.out.println("animal is running");<br>
-    }<br>
-}<br>
- 
-class Dog extends Animal {<br>
-    public void run() {<br>
-        System.out.println("Dog is running");<br>
-        super.run();//调用父类的run方法<br>
-    }<br>
-}<br>
-输出结果：<br>
-Dog is running<br>
-animal is running<br>
-        4) 在定义一个类的时候，如果没有显式指定该类的父类，那么该类就会继承于java.lang.Object(JDK提供的一个类，Object类是Java中所有类直接或间接父类)。下面举个例子：<br>
- 
-public class InheritenceTest {<br>
-    public static void main(String[] args) {<br>
-        Son son = new Son();<br>
-    }<br>
-}<br>
- 
-class Grandpa {<br>
-    public Grandpa() {<br>
-        System.out.println("grandpa");<br>
+class Grandpa {
+    public Grandpa() {
+        System.out.println("grandpa");
     }
 }
  
@@ -59,3 +60,4 @@ class Son extends Father {
 grandpa
 father
 son
+```
