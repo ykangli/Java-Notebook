@@ -65,7 +65,21 @@ son
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 `异常` 导致程序的正常流程被中断的事件，叫做异常<br>
-下面的例子为利用java打开`d:/LOL.exe`,如果不做任何处理就会报错，Java会强制你考虑两种情况:该文件存在与否<br>
+
+异常分为检查型异常(CheckedException)，非检查型异常(Error和RuntimeException)以及错误(Errror)。RuntimeException包括数组越界，访问null指针，错误的强制转换；<br>
+出现该类异常，一定是自己的问题。<br>
+
+检查型异常(CheckedException): 如果不处理，编译器，就不让你通过
+非检查型异常(Error和RuntimeException): 不是必须进行try catch的异常
+
+编译器将检查你是否为所有的检查型异常提供了异常处理器<br>
+
+下面的例子为利用java打开`d:/LOL.exe`,如果不做任何处理就会报错，Java编译器会强制你考虑两种情况:该文件存在与否<br>
+
+`设计的面试问题：`<br>
+运行时异常与非运行时异常的区别：
+运行时异常是不可查异常，不需要进行显式的捕捉
+非运行时异常是可查异常，必须进行显式的捕捉，或者抛出
 
 ```
 package practice;
@@ -205,8 +219,44 @@ public class TestException {
     }
 }
 ```
+`finally` 无论异常与否，finally都会被调用
 
+`throws` 抛出异常，一般利用函数调用
+```
+public class TestException {
+ 
+    public static void main(String[] args) {
+        method1();
+ 
+    }
+ 
+    private static void method1() {
+        try {
+            method2();
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+ 
+    }
+ 
+    private static void method2() throws FileNotFoundException {
+ 
+        File f = new File("d:/LOL.exe");
+ 
+        System.out.println("试图打开 d:/LOL.exe");
+        new FileInputStream(f);
+        System.out.println("成功打开");
+ 
+    }
+}
+```
+此例中，method2()抛出异常给method1()，由method1()的try和catch来处理异常
 
+抛出异常：
+`throws与throw的区别`
+1. throws 出现在方法声明上，而throw通常都出现在方法体内。
+2. throws 表示出现异常的一种可能性，并不一定会发生这些异常；throw则是抛出了异常，执行throw则一定抛出了某个异常对象。
 
 
 
