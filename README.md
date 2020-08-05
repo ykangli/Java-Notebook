@@ -67,9 +67,11 @@ son
 `异常` 导致程序的正常流程被中断的事件，叫做异常<br>
 
 异常分为检查型异常(CheckedException)，非检查型异常(Error和RuntimeException)以及错误(Errror)。RuntimeException包括数组越界，访问null指针，错误的强制转换；<br>
+
 出现该类异常，一定是自己的问题。<br>
 
 检查型异常(CheckedException): 如果不处理，编译器，就不让你通过
+
 非检查型异常(Error和RuntimeException): 不是必须进行try catch的异常
 
 编译器将检查你是否为所有的检查型异常提供了异常处理器<br>
