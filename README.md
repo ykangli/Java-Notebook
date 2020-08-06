@@ -263,7 +263,9 @@ public class TestException {
 1. throws 出现在方法声明上，而throw通常都出现在方法体内。
 2. throws 表示出现异常的一种可能性，并不一定会发生这些异常；throw则是抛出了异常，执行throw则一定抛出了某个异常对象。
 
+`Throwable` Exception和Error都继承了该类
 
+![Throwable类](https://github.com/ykangli/-/blob/master/742.png)
 
 
 
