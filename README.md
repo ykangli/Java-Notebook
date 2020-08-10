@@ -267,6 +267,8 @@ public class TestException {
 
 ![Throwable类](https://github.com/ykangli/-/blob/master/742.png)
 
+创建异常：
+
 
 
 
