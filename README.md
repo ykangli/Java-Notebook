@@ -14,6 +14,10 @@
 
 3.子类中重写的方法的访问权限不能低于父类中方法的访问权限
 
+权限修饰符 : private  <   默认(什么都不写)  <   protected  < public
+
+override机制的作用：没有override，子类一旦继承父类的方法就不能进行修改。当子类希望稍微提供一点不一样的功能是只能全部重写。
+
 具体代码实例：<br>
 ```Java
 public class InheritenceTest {
