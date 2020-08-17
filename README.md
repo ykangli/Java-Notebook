@@ -63,6 +63,57 @@ father
 son
 ```
 
+`对象转型：`
+类型转换：指的是引用类型和对象类型不一致的情况下的转换问题。通常情况下，引用类型和对象类型是一样的
+
+1.所有的子类转换为父类，都是说得通的。
+2.没有继承关系的两个类，互相转换，一定会失败
+
+```
+package charactor;
+ 
+public class Hero {
+    public String name;
+    protected float hp;
+     
+    public static void main(String[] args) {
+         
+        Hero h = new Hero();
+         
+        ADHero ad = new ADHero();
+         
+        //类型转换指的是把一个引用所指向的对象的类型，转换为另一个引用的类型
+         
+        //把ad引用所指向的对象的类型是ADHero
+        //h引用的类型是Hero
+        //把ADHero当做Hero使用，一定可以
+         
+        h = ad;
+         
+    }
+}
+```
+`接口:` 用来描述类应该做什么。一个类可以有多个接口。
+例如：以下例子就是表明ADHero这个类的功能
+
+```
+package charactor;
+ 
+public class ADHero extends Hero implements AD{
+ 
+    @Override
+    public void physicAttack() {
+        System.out.println("进行物理攻击");
+    }
+ 
+}
+```
+
+
+
+
+
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 `异常` 导致程序的正常流程被中断的事件，叫做异常<br>
 
