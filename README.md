@@ -33,7 +33,7 @@ animal is running
 ```
 在定义一个类的时候，如果没有显式指定该类的父类，那么该类就会继承于java.lang.Object(JDK提供的一个类，Object类是Java中所有类直接或间接父类)。下面举个例子：
 
-``` 
+``` Java
 public class InheritenceTest {
     public static void main(String[] args) {
         Son son = new Son();
@@ -86,7 +86,7 @@ son
 可查异常
 
 `Java规定：` 对于可查异常必须捕捉、或者声明抛出。允许忽略不可查的RuntimeException和Error。Error也是可以catch的
-```
+```Java
 package practice;
 
 import java.io.File;
@@ -106,7 +106,7 @@ public class Exception {
 
 因此强制考虑处理异常：<br>
 1）利用try-catch<br>
-```
+```Java
 package practice;
 
 import java.io.File;
@@ -146,7 +146,7 @@ java.io.FileNotFoundException: d:\LOL.exe (系统找不到指定的文件。)
 2)使用异常的父类进行catch<br>
 FileNotFoundException是`Exception`的子类，使用Exception也可以catch住FileNotFoundException
 
-```
+```Java
 package exception;
   
 import java.io.File;
@@ -175,7 +175,7 @@ public class TestException {
 ```
 3)多异常捕捉<br>
 可能存在多个异常，如文件异常和解析异常，因此可使用多个catch
-```
+```Java
 public class TestException {
 
 	public static void main(String[] args) throws FileNotFoundException {
@@ -199,7 +199,7 @@ public class TestException {
 }
 ```
 此外还可将多个异常放在同一个catch里面，可用 `ininstanceof` 进行判断具体的异常类型
-```
+```Java
 public class TestException {
  
     public static void main(String[] args) {
@@ -227,7 +227,7 @@ public class TestException {
 `finally` 无论异常与否，finally都会被调用
 
 `throws` 抛出异常，一般利用函数调用
-```
+```Java
 public class TestException {
  
     public static void main(String[] args) {
