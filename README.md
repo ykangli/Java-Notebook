@@ -7,7 +7,7 @@
 2）方法重写（Override）与方法重载（Overload）之间的关系：重载发生在`同一个类内部`的两个方法或多个方法。重写发生在`父类和子类`之间。<br>
 
 具体代码实例：<br>
-```
+```Java
 public class InheritenceTest {
     public static void main(String[] args) {
         Dog dog = new Dog();
