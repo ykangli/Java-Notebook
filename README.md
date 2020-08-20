@@ -43,6 +43,11 @@ class Dog extends Animal {
 Dog is running
 animal is running
 ```
+
+`多态`     包括`操作符的多态`和`类的多态`
+
+
+
 在定义一个类的时候，如果没有显式指定该类的父类，那么该类就会继承于java.lang.Object(JDK提供的一个类，Object类是Java中所有类直接或间接父类)。下面举个例子：
 
 ``` Java
