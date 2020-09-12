@@ -112,8 +112,48 @@ public class DemoMethod4 {
     }
 }
 ```
+`集合也可以当作方法的返回值：`
 
+例：筛选集合中的随机数（将随机产生的数字存储在大集合中，筛选出偶数将其放置在小集合中）
 
+```java
+package demo02;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class SelectNumber {
+
+    //将大集合中的偶数添加到小集合中
+    public static ArrayList<Integer> getSmaliList(ArrayList<Integer> bigList) {
+        ArrayList<Integer> smallList = new ArrayList<>();
+        for (int i = 0; i < bigList.size(); i++) {
+            int num = bigList.get(i);
+            if(num % 2 == 0) {
+                smallList.add(num);
+            }
+        }
+        return smallList;
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> bigList = new ArrayList<>();
+        Random random = new Random();
+
+        //随机产生0-30范围内的20个数字
+        for (int i = 0; i < 20; i++) {
+            int r = random.nextInt(30) + 1;
+            bigList.add(r);
+        }
+
+        ArrayList<Integer> smallList = getSmaliList(bigList);
+        
+        for (int i = 0; i < smallList.size(); i++) {
+            System.out.println(smallList.get(i));
+        }
+    }
+}
+```
 
 
 
