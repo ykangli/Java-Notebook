@@ -46,6 +46,13 @@ public class DemoMethod {
     基本数据类型在被创建时，在栈上给其划分一块内存，将数值直接存储在栈上。
     
     引用数据类型在被创建时，首先要在 栈 上给其引用（句柄）分配一块内存，而对象的具体信息都存储在 堆内存 上，然后由栈上面的引用指向堆中对象的地址。
+    
+数组工具类：    
+
+    public static void String toString(数组) //将参数数组变成字符串 
+    
+    public static void sort(数组)  // 从小到大排序
+
 
 `ArrayList`   
 
