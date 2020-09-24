@@ -19,7 +19,7 @@ final，即为最后的意思，具体使用方法：
   package demo03;
 
 public class Student {
-    final int num = 10;
+    int num = 10;
     String name;
 
     public Student(String name) {
@@ -47,4 +47,42 @@ public class Student {
     }
 }
 ```
+
+5.final修饰成员变量
+
+  final成员变量后必须手动赋值，而不会再给默认值
+  
+  对于final的成员变量，直接赋值和通过构造方法赋值二选一
+  
+  必须保证类中所有的重载方法都会对final的成员变量进行赋值
+  
+```java
+package demo03;
+
+public class Person {
+    private final String name ;
+
+    public Person() {//利用构造器进行对final修饰的成员变量进行赋值，则不可对name进行直接赋值，二者选其一
+        name = "Jordon";
+    }
+
+    public Person(String name) {//保证所有的重载方法都会对final修饰的成员变量赋值
+        this.name = name;
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
